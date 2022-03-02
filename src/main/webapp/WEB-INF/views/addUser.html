@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/user}" th:object="${user}">
+    <label for="name">Name</label>
+    <input name="text" th:field="*{name}" id="name"/>
+    <br><br>
+    <label for="lastName">Last Name</label>
+    <input name="text" th:field="*{lastName}" id="lastName"/>
+    <br><br>
+    <label for="age">Age</label>
+    <input name="text" th:field="*{age}" id="age"/>
+    <br><br>
+    <input type="submit" value="Add User">
+</form>
+</body>
+</html>
